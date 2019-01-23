@@ -10,25 +10,9 @@ const start = document.getElementById('start');
 const course  = document.getElementById('courseName');
 // const option = document.querySelector('option');    
 
-/*新たにかく！*/
 
-// let personAry = [];
-// let frontAry = [];
-// function arrPush2(){
-//     const yname = document.getElementsByName('yname'); //休み
-//     const kname = document.getElementsByName('kname'); //前列
-//     personAry = [];
-//     frontAry  = [];
-    
-//     for(let i =0 ; i<=kname.length ;i++){
-//         if(kname[i].checked){
-//             frontAry.push(i);
-//     }
-// }
-// console.log(frontAry);
-// };
 
-/* ここまでで一旦保留  */
+
 
 // 席番号の配列準備
 let personAry = []; //後ろ配列
@@ -78,6 +62,7 @@ if(course.value ==='LAB'){
 }
 
 
+// セレクトボックス表示用
 let div3 = '';
 function yselect2(){
     // fname2用
@@ -99,7 +84,7 @@ function yselect2(){
     fname2.innerHTML = div3
 }
 
-// 席位置表示用の関数
+// シャッフル席位置表示用の関数
     let div;
 function upDate(){    
     div = '';
@@ -198,7 +183,7 @@ start.addEventListener('click',function(){
       div2 = '';   
       div3 = '';   
   }
- arrPush();
+ arrPush2();
  yselect();
  yselect2();
  mdl.className = '';
@@ -206,7 +191,7 @@ getCheckbox();
 });
 
 
-
+// チェックボックスの挙動用関数 片方が消えたり着いたりする
 function getCheckbox(){
     if(course.value === 'LAB'){
          for(let i=1;i<51;i++){
