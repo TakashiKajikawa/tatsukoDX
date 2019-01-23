@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1 class="text-center logo"><img src="images/logo.png" alt=""></h1>
+
+<div class='index'>
+    <div class="text-center block-choose">
+        <select name="courseName" id="courseName" class="block-choose__courseName">
+            <option value="LAB">LAB</option>
+            <option value="DEV">DEV</option>
+        </select>
+        <button class="btn waves-effect waves-light btn-large block-choose__btn" id="start">欠席者と前列希望者を選択</button>
+    </div>
+    <div id="app"></div>
+</div>
+    <!-- 以下モーダル -->
+    <div id="modalwrapper" class='hidden'>
+        <div id = mdl >
+                <form name='form1' action="">
+                    <fieldset>
+                            <legend class='ftitle'>欠席者にチェックをしてください</legend>
+                            <div id='fname'></div>
+                    </fieldset>
+                    <fieldset class="check2">
+                            <legend class='ftitle2'>前列希望の方にチェックをしてください</legend>
+                            <div id ='fname2'></div>
+                    </fieldset>
+                </form>
+            <div class=mstart>
+                <button id=sstart>シャッフル開始</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
